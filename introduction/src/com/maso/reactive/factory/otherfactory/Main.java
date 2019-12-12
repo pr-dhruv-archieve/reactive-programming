@@ -1,5 +1,7 @@
 package com.maso.reactive.factory.otherfactory;
 
+import java.util.concurrent.Future;
+
 import io.reactivex.Observable;
 
 public class Main {
@@ -28,9 +30,15 @@ public class Main {
 		 * To make sure these factory functions are working we need to pause the main
 		 * thread or make it sleep. for both the factory method empty() and never().
 		 */
+
+		/**
+		 * Future<T> -> Sometimes you are using the other libraries that use Future<T>
+		 * instead of Observable, We want to convert all the future to Observable then
+		 * fromFuture() factory is used.
+		 */
 		
-		
-		
+		Future<String> future = ...;
+		Observable.fromFuture(future).map(String::length).subscribe(System.out::println);
 		
 	}
 }
