@@ -1,4 +1,4 @@
-package com.maso.reactive.factory.otherfactory;
+package com.maso.reactive.factorymethods.otherfactory;
 
 import java.util.concurrent.Future;
 

@@ -1,4 +1,4 @@
-package com.maso.reactive.factory.hot;
+package com.maso.reactive.factorymethods.hot;
 
 import java.util.Arrays;
 import java.util.List;

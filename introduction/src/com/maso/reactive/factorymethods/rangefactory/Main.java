@@ -1,4 +1,4 @@
-package com.maso.reactive.factory.rangefactory;
+package com.maso.reactive.factorymethods.rangefactory;
 
 import io.reactivex.Observable;
 

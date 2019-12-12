@@ -1,4 +1,4 @@
-package com.maso.reactive.factory.intervalfactory;
+package com.maso.reactive.factorymethods.intervalfactory;
 
 import java.util.concurrent.TimeUnit;
 
