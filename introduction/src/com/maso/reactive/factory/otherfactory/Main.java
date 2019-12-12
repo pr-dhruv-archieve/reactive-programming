@@ -37,8 +37,8 @@ public class Main {
 		 * fromFuture() factory is used.
 		 */
 		
-		Future<String> future = ...;
-		Observable.fromFuture(future).map(String::length).subscribe(System.out::println);
+		// Future<String> future = ...;
+		// Observable.fromFuture(future).map(String::length).subscribe(System.out::println);
 		
 	}
 }
