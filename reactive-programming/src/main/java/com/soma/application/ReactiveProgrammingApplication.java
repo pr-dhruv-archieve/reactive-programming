@@ -17,20 +17,16 @@ public class ReactiveProgrammingApplication {
 	public CommandLineRunner employee(EmployeeRepository employeeRepository) {
 		return args -> {
 			employeeRepository
-					.deleteAll()
+					.deleteAll()	// For cleanup the data
 					.subscribe(null, null, () -> {
-						() -> Stream.of(
-								new Employee(UUID.randomUUID().toString(), "Ram", 1500000),
-								new Employee(UUID.randomUUID().toString(), "Jaya", 1400000),
-								new Employee(UUID.randomUUID().toString(), "Bhanu", 1300000),
-								new Employee(UUID.randomUUID().toString(), "Dev", 1200000)
+						Stream.of(
+								new Employee(UUID.randomUUID().toString(), "Name 1", new Double("1000000.00")),
+								new Employee(UUID.randomUUID().toString(), "Name 2", 900000.00),
+								new Employee(UUID.randomUUID().toString(), "Name 3", 800000.00),
+								new Employee(UUID.randomUUID().toString(), "Name 4", 700000.00)
 						).forEach(employee -> {
-							employeeRepository.save(employee)
-									.subscribe(System.out::println);
+							employeeRepository.save(employee).subscribe(System.out::println);
 						});
-
-
-
 					});
 		};
 	}
